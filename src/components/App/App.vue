@@ -2,7 +2,12 @@
 
 <script src="./app.js"></script>
 
-<style>
+<style lang="sass">
+    @import "../../../node_modules/material-design-lite/src/_color-definitions.scss";
+    $color-primary: $palette-deep-orange-500 !default;
+    $color-primary-dark: $palette-deep-orange-700 !default;
+    $color-accent: $palette-amber-A200 !default;
+
     body {
         background: #ebeff2;
         font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -10,11 +15,6 @@
     
     text {
         text-anchor: middle;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
     }
     
     .pause {

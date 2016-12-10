@@ -1,6 +1,6 @@
 import NoBallDrop from './../NoBallDrop/NoBallDrop.vue';
 //const ROOTPATH = "/~zchenbn/click-animation/";
-const ROOTPATH = "/";
+const ROOTPATH = "./";
 export default {
     ready() {
         d3.json(this.rawDataPath, (err, data) => {

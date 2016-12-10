@@ -35,7 +35,7 @@ webpackJsonp([0],[
 	
 	var router = new _vueRouter2.default({
 	    //root:"/~zchenbn/click-animation",
-	    root: "",
+	    root: "/click-animation",
 	    history: true,
 	    saveScrollPosition: true
 	});

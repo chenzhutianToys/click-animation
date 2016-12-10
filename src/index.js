@@ -10,7 +10,7 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
     //root:"/~zchenbn/click-animation",
-    root:"",
+    root:"/click-animation",
     history: true,
     saveScrollPosition: true
 });

@@ -5,15 +5,17 @@
   "main": "index.html",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "clean": "rm -rf dist/*",
+    "deploy": "npm run clean && npm run build && cd dist && git add --all && git commit -m \"Release at $(date)\" && git push"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/vismooc/clickanimation.git"
+    "url": "https://github.com/chenzhutianToys/click-animation.git"
   },
   "author": "zhutian",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/vismooc/clickanimation#readme",
+  "homepage": "https://github.com/chenzhutianToys/click-animation",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.6.5",
@@ -38,8 +40,6 @@
     "less-loader": "^2.2.2",
     "material-design-lite": "^1.1.2",
     "node-sass": "^3.4.2",
-    "pathgl": "^0.1.1",
-    "pixi.js": "^3.0.9",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",

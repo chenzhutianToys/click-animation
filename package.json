@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
     "build": "node build.js build",
-    "deploy": "npm run build && cd dist && git add --all && git commit -m \"Release at $(date)\" && git push"
+    "clean": "node build.js clean",
+    "pullghpage": "git clone git@github.com:chenzhutianToys/click-animation.git -b gh-pages --single-branch dist",
+    "pushghpage": "git add --all && git commit -m \"Release at $(date)\" && git push",
+    "deploy": "npm run clean && npm run pullghpage && npm run build && cd dist && npm run pushghpage"
   },
   "repository": {
     "type": "git",

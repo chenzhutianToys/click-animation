@@ -8,6 +8,7 @@ function build() {
     var webpack = require('webpack');
     var config = require('./webpack.config');
     process.env.NODE_ENV = "production"
+    rm('-rf', 'dist/*');
     mkdir('-p', "dist/data");
     cp("src/data/*","dist/data/")
     webpack(config, function (err, stats) {

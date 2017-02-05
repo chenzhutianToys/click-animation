@@ -53,14 +53,6 @@ webpackJsonp([0],[
 	});
 	
 	router.start(_App2.default, '#app');
-	
-	// var v = new Vue({
-	//     el: 'body',
-	//     components: {
-	//         ScreenScroll,
-	//         NoBallDrop
-	//     }
-	// });
 
 /***/ },
 /* 1 */,
@@ -2788,9 +2780,7 @@ webpackJsonp([0],[
 	__webpack_require__(6)
 	__webpack_require__(10)
 	__vue_script__ = __webpack_require__(11)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
+	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] src\\components\\App\\App.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(105)
 	module.exports = __vue_script__ || {}
@@ -3166,9 +3156,7 @@ webpackJsonp([0],[
 	__webpack_require__(13)
 	__webpack_require__(14)
 	__vue_script__ = __webpack_require__(15)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
+	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] src\\components\\NoBallDrop\\NoBallDrop.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(104)
 	module.exports = __vue_script__ || {}
@@ -4512,9 +4500,7 @@ webpackJsonp([0],[
 	var __vue_styles__ = {}
 	__webpack_require__(57)
 	__vue_script__ = __webpack_require__(58)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
+	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] src\\components\\BubbleFloat\\BubbleFloat.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(97)
 	module.exports = __vue_script__ || {}
@@ -7860,13 +7846,13 @@ webpackJsonp([0],[
 /* 104 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<!-- Your content goes here -->\n<div class=\"screen-scroll mdl-card mdl-shadow--3dp mdl-cell mdl-cell--12-col\" _v-613ff422=\"\">\n    <div class=\"mdl-card__title\" _v-613ff422=\"\">\n        <h2 class=\"mdl-card__title-text\" _v-613ff422=\"\">Video-{{selectedVideo}}</h2>\n    </div>\n\n    <svg class=\"screen-scroll-svg\" _v-613ff422=\"\"></svg>\n    <div class=\"mdl-card__actions mdl-card--border\" _v-613ff422=\"\"> </div>\n    <bubble-float v-ref:bubble-float-component=\"\" _v-613ff422=\"\"></bubble-float>\n</div>";
+	module.exports = "\n<!-- Your content goes here -->\n<div class=\"screen-scroll mdl-card mdl-shadow--3dp mdl-cell mdl-cell--12-col\" _v-0f41474e=\"\">\n    <div class=\"mdl-card__title\" _v-0f41474e=\"\">\n        <h2 class=\"mdl-card__title-text\" _v-0f41474e=\"\">Video-{{selectedVideo}}</h2>\n    </div>\n\n    <svg class=\"screen-scroll-svg\" _v-0f41474e=\"\"></svg>\n    <div class=\"mdl-card__actions mdl-card--border\" _v-0f41474e=\"\"> </div>\n    <bubble-float v-ref:bubble-float-component=\"\" _v-0f41474e=\"\"></bubble-float>\n</div>";
 
 /***/ },
 /* 105 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"mdl-layout mdl-js-layout\" _v-81cd484e=\"\">\n    <header class=\"mdl-layout__header mdl-layout__header--scroll\" _v-81cd484e=\"\">\n        <div class=\"mdl-layout__header-row\" _v-81cd484e=\"\">\n            <!-- Title -->\n            <span class=\"mdl-layout-title\" _v-81cd484e=\"\">Videos</span>\n            <!-- Add spacer, to align navigation to the right -->\n            <div class=\"mdl-layout-spacer\" _v-81cd484e=\"\"></div>\n            <!-- Navigation. We hide it in small screens. -->\n            <nav class=\"mdl-navigation\" _v-81cd484e=\"\">\n                <a class=\"mdl-navigation__link\" v-link=\"vLinkIndex\" _v-81cd484e=\"\">Ours</a>\n                <a class=\"mdl-navigation__link\" v-link=\"vLinkCongleiPath\" _v-81cd484e=\"\">Conglei's</a>\n                <a class=\"mdl-navigation__link\" v-link=\"vLinkNoForeshadow\" _v-81cd484e=\"\">No ForeShadow</a>\n            </nav>\n        </div>\n    </header>\n    <div class=\"mdl-layout__drawer\" _v-81cd484e=\"\">\n        <span class=\"mdl-layout-title\" _v-81cd484e=\"\">Videos</span>\n        <nav class=\"mdl-navigation\" _v-81cd484e=\"\">\n            <label class=\"mdl-navigation__link\" _v-81cd484e=\"\">Video\n                <select v-model=\"selectedVideo\" @change=\"SelectVideo\" :disabled=\"selectVideoDisabled\" _v-81cd484e=\"\">\n                    <option v-for=\"id in videoIds\" :value=\"id\" _v-81cd484e=\"\">\n                        {{ id }}\n                    </option>\n                </select>\n            </label>\n\n            <label class=\"mdl-navigation__link\" _v-81cd484e=\"\">Speed X\n                <select v-model=\"zoomScaleMax\" @change=\"SelectSpeed\" :disabled=\"selectVideoDisabled\" _v-81cd484e=\"\">\n                    <option v-for=\"speed in zoomScaleList\" :value=\"speed\" _v-81cd484e=\"\">\n                        {{ speed }}\n                    </option>\n                </select>\n            </label>\n\n            <label class=\"mdl-navigation__link\" _v-81cd484e=\"\">\n                <label class=\"mdl-switch mdl-js-switch mdl-js-ripple-effect \" for=\"isAcceleration\" _v-81cd484e=\"\">\n                    <input type=\"checkbox\" id=\"isAcceleration\" class=\"mdl-switch__input\" v-model=\"isAcceleration\" @change=\"ChangeAcceleration\" _v-81cd484e=\"\">\n                    <span class=\"mdl-switch__label\" _v-81cd484e=\"\">Accerleration</span>\n                </label>\n            </label>\n\n            <label class=\"mdl-navigation__link\" for=\"btn-play\" _v-81cd484e=\"\">\n                <button id=\"btn-play\" class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color-text--grey-800\" type=\"button\" @click=\"Resume\" _v-81cd484e=\"\"> Play </button>\n            </label>\n\n            <label class=\"mdl-navigation__link\" for=\"btn-Pause\" _v-81cd484e=\"\">\n                <button id=\"btn-Pause\" class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\" type=\"button\" @click=\"Pause\" _v-81cd484e=\"\">\n                    Pause </button>\n            </label>\n\n            <label class=\"mdl-navigation__link\" _v-81cd484e=\"\">\n                <hr _v-81cd484e=\"\">\n            </label>\n        </nav>\n\n    </div>\n    <main class=\"mdl-layout__content\" _v-81cd484e=\"\">\n        <div class=\"page-content\" _v-81cd484e=\"\">\n            <!-- Your content goes here -->\n            <router-view v-ref:click-animation-component=\"\" _v-81cd484e=\"\">\n            </router-view>\n        </div>\n    </main>\n</div>";
+	module.exports = "<div class=\"mdl-layout mdl-js-layout\" _v-e7b4587a=\"\">\n    <header class=\"mdl-layout__header mdl-layout__header--scroll\" _v-e7b4587a=\"\">\n        <div class=\"mdl-layout__header-row\" _v-e7b4587a=\"\">\n            <!-- Title -->\n            <span class=\"mdl-layout-title\" _v-e7b4587a=\"\">Videos</span>\n            <!-- Add spacer, to align navigation to the right -->\n            <div class=\"mdl-layout-spacer\" _v-e7b4587a=\"\"></div>\n            <!-- Navigation. We hide it in small screens. -->\n            <nav class=\"mdl-navigation\" _v-e7b4587a=\"\">\n                <a class=\"mdl-navigation__link\" v-link=\"vLinkIndex\" _v-e7b4587a=\"\">Best</a>\n                <a class=\"mdl-navigation__link\" v-link=\"vLinkCongleiPath\" _v-e7b4587a=\"\">Conglei's</a>\n                <a class=\"mdl-navigation__link\" v-link=\"vLinkNoForeshadow\" _v-e7b4587a=\"\">No ForeShadow</a>\n            </nav>\n        </div>\n    </header>\n    <div class=\"mdl-layout__drawer\" _v-e7b4587a=\"\">\n        <span class=\"mdl-layout-title\" _v-e7b4587a=\"\">Videos</span>\n        <nav class=\"mdl-navigation\" _v-e7b4587a=\"\">\n            <label class=\"mdl-navigation__link\" _v-e7b4587a=\"\">Video\n                <select v-model=\"selectedVideo\" @change=\"SelectVideo\" :disabled=\"selectVideoDisabled\" _v-e7b4587a=\"\">\n                    <option v-for=\"id in videoIds\" :value=\"id\" _v-e7b4587a=\"\">\n                        {{ id }}\n                    </option>\n                </select>\n            </label>\n\n            <label class=\"mdl-navigation__link\" _v-e7b4587a=\"\">Speed X\n                <select v-model=\"zoomScaleMax\" @change=\"SelectSpeed\" :disabled=\"selectVideoDisabled\" _v-e7b4587a=\"\">\n                    <option v-for=\"speed in zoomScaleList\" :value=\"speed\" _v-e7b4587a=\"\">\n                        {{ speed }}\n                    </option>\n                </select>\n            </label>\n\n            <label class=\"mdl-navigation__link\" _v-e7b4587a=\"\">\n                <label class=\"mdl-switch mdl-js-switch mdl-js-ripple-effect \" for=\"isAcceleration\" _v-e7b4587a=\"\">\n                    <input type=\"checkbox\" id=\"isAcceleration\" class=\"mdl-switch__input\" v-model=\"isAcceleration\" @change=\"ChangeAcceleration\" _v-e7b4587a=\"\">\n                    <span class=\"mdl-switch__label\" _v-e7b4587a=\"\">Accerleration</span>\n                </label>\n            </label>\n\n            <label class=\"mdl-navigation__link\" for=\"btn-play\" _v-e7b4587a=\"\">\n                <button id=\"btn-play\" class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color-text--grey-800\" type=\"button\" @click=\"Resume\" _v-e7b4587a=\"\"> Play </button>\n            </label>\n\n            <label class=\"mdl-navigation__link\" for=\"btn-Pause\" _v-e7b4587a=\"\">\n                <button id=\"btn-Pause\" class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\" type=\"button\" @click=\"Pause\" _v-e7b4587a=\"\">\n                    Pause </button>\n            </label>\n\n            <label class=\"mdl-navigation__link\" _v-e7b4587a=\"\">\n                <hr _v-e7b4587a=\"\">\n            </label>\n        </nav>\n\n    </div>\n    <main class=\"mdl-layout__content\" _v-e7b4587a=\"\">\n        <div class=\"page-content\" _v-e7b4587a=\"\">\n            <!-- Your content goes here -->\n            <router-view v-ref:click-animation-component=\"\" _v-e7b4587a=\"\">\n            </router-view>\n        </div>\n    </main>\n</div>";
 
 /***/ },
 /* 106 */
@@ -7877,9 +7863,7 @@ webpackJsonp([0],[
 	__webpack_require__(107)
 	__webpack_require__(108)
 	__vue_script__ = __webpack_require__(109)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
+	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] src\\components\\CongleiBaseline\\CongleiBaseline.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(110)
 	module.exports = __vue_script__ || {}
@@ -8375,7 +8359,7 @@ webpackJsonp([0],[
 /* 110 */
 /***/ function(module, exports) {
 
-	module.exports = "<!-- Your content goes here -->\n<div class=\"conglei mdl-card mdl-shadow--3dp mdl-cell mdl-cell--12-col\" _v-5d610277=\"\">\n    <div class=\"mdl-card__title\" _v-5d610277=\"\">\n        <h2 class=\"mdl-card__title-text\" _v-5d610277=\"\">Video-{{selectedVideo}}</h2>\n    </div>\n\n    <svg class=\"conglei-svg\" _v-5d610277=\"\"></svg>\n    <bubble-float v-ref:bubble-float-component=\"\" _v-5d610277=\"\"></bubble-float>\n</div>";
+	module.exports = "<!-- Your content goes here -->\n<div class=\"conglei mdl-card mdl-shadow--3dp mdl-cell mdl-cell--12-col\" _v-0e5edc61=\"\">\n    <div class=\"mdl-card__title\" _v-0e5edc61=\"\">\n        <h2 class=\"mdl-card__title-text\" _v-0e5edc61=\"\">Video-{{selectedVideo}}</h2>\n    </div>\n\n    <svg class=\"conglei-svg\" _v-0e5edc61=\"\"></svg>\n    <bubble-float v-ref:bubble-float-component=\"\" _v-0e5edc61=\"\"></bubble-float>\n</div>";
 
 /***/ },
 /* 111 */
@@ -8386,9 +8370,7 @@ webpackJsonp([0],[
 	__webpack_require__(112)
 	__webpack_require__(113)
 	__vue_script__ = __webpack_require__(114)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
+	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] src\\components\\NoForeShadowBaseline\\NoForeshadowBaseline.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(115)
 	module.exports = __vue_script__ || {}
@@ -8963,7 +8945,7 @@ webpackJsonp([0],[
 /* 115 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<!-- Your content goes here -->\n<div class=\"no-foreshadow-baseline mdl-card mdl-shadow--3dp mdl-cell mdl-cell--12-col\" _v-24f243ef=\"\">\n    <div class=\"mdl-card__title\" _v-24f243ef=\"\">\n        <h2 class=\"mdl-card__title-text\" _v-24f243ef=\"\">Video-{{selectedVideo}}</h2>\n    </div>\n\n    <svg class=\"no-foreshadow-baseline-svg\" _v-24f243ef=\"\"></svg>\n    <div class=\"mdl-card__actions mdl-card--border\" _v-24f243ef=\"\"> </div>\n    <bubble-float v-ref:bubble-float-component=\"\" _v-24f243ef=\"\"></bubble-float>\n</div>";
+	module.exports = "\n<!-- Your content goes here -->\n<div class=\"no-foreshadow-baseline mdl-card mdl-shadow--3dp mdl-cell mdl-cell--12-col\" _v-72404159=\"\">\n    <div class=\"mdl-card__title\" _v-72404159=\"\">\n        <h2 class=\"mdl-card__title-text\" _v-72404159=\"\">Video-{{selectedVideo}}</h2>\n    </div>\n\n    <svg class=\"no-foreshadow-baseline-svg\" _v-72404159=\"\"></svg>\n    <div class=\"mdl-card__actions mdl-card--border\" _v-72404159=\"\"> </div>\n    <bubble-float v-ref:bubble-float-component=\"\" _v-72404159=\"\"></bubble-float>\n</div>";
 
 /***/ }
 ]);

@@ -28,11 +28,3 @@ router.map({
 });
 
 router.start(App, '#app');
-
-// var v = new Vue({
-//     el: 'body',
-//     components: {
-//         ScreenScroll,
-//         NoBallDrop
-//     }
-// });
